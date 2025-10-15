@@ -7,9 +7,13 @@ import os
 
 from setuptools import find_packages, setup
 
+TORCH_VERSION = os.environ.get("TORCH_VERSION", "2.5.1")
+CU_TAG = os.environ.get("CU_TAG", "cu124")
+PT_TAG = os.environ.get("PT_TAG", "25")
+
 # Package metadata
 NAME = "SAM-2"
-VERSION = "1.1.0"
+VERSION = f"1.1.0+{PT_TAG}{CU_TAG}"
 DESCRIPTION = "SAM 2: Segment Anything in Images and Videos"
 URL = "https://github.com/facebookresearch/sam2"
 AUTHOR = "Meta AI"
@@ -20,11 +24,9 @@ LICENSE = "Apache 2.0"
 with open("README.md", "r", encoding="utf-8") as f:
     LONG_DESCRIPTION = f.read()
 
-TORCH_VERSION = os.environ.get("TORCH_VERSION", "2.5.1")
-
 # Required dependencies
 REQUIRED_PACKAGES = [
-    f"torch=={TORCH_VERSION}",
+    f"torch=={TORCH_VERSION}+{CU_TAG}",
     "torchvision>=0.20.1",
     "numpy>=1.24.4",
     "tqdm>=4.66.1",

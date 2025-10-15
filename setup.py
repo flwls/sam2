@@ -9,7 +9,7 @@ from setuptools import find_packages, setup
 
 TORCH_VERSION = os.environ.get("TORCH_VERSION", "2.5.1")
 CU_TAG = os.environ.get("CU_TAG", "cu124")
-PT_TAG = os.environ.get("PT_TAG", "25")
+PT_TAG = os.environ.get("PT_TAG", "pt25")
 
 # Package metadata
 NAME = "SAM-2"

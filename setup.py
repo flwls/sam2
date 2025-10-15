@@ -12,7 +12,7 @@ CU_TAG = os.environ.get("CU_TAG", "cu124")
 PT_TAG = os.environ.get("PT_TAG", "pt25")
 
 # Package metadata
-NAME = "SAM-2"
+NAME = "sam2"
 VERSION = f"1.1.0+{PT_TAG}{CU_TAG}"
 DESCRIPTION = "SAM 2: Segment Anything in Images and Videos"
 URL = "https://github.com/facebookresearch/sam2"
